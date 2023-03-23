@@ -1,0 +1,54 @@
+{
+  "name": "cart-reborn",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A Quasar Project",
+  "productName": "Quasar App",
+  "author": "",
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "build:pwa": "quasar build -m pwa",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.15.11",
+    "@unocss/reset": "^0.50.6",
+    "axios": "^1.3.4",
+    "pinia": "^2.0.33",
+    "pinia-plugin-persistedstate": "^3.1.0",
+    "quasar": "^2.11.8",
+    "vue": "^3.2.47",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.37.0",
+    "@intlify/vite-plugin-vue-i18n": "^3.4.0",
+    "@quasar/app-vite": "^1.2.1",
+    "@types/node": "^12.20.55",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.6",
+    "typescript": "^4.9.5",
+    "unocss": "^0.50.6",
+    "unplugin-auto-import": "^0.15.1",
+    "unplugin-vue-components": "^0.24.1",
+    "workbox-build": "^6.5.0",
+    "workbox-cacheable-response": "^6.5.0",
+    "workbox-core": "^6.5.0",
+    "workbox-expiration": "^6.5.0",
+    "workbox-precaching": "^6.5.0",
+    "workbox-routing": "^6.5.0",
+    "workbox-strategies": "^6.5.0"
+  }
+}

@@ -1,0 +1,13 @@
+// override default Quasar classes
+
+// button hover effects
+.q-btn .q-focus-helper {
+  display: none;
+}
+
+// input, select, textarea border
+.q-field--outlined {
+  .q-field__control:before {
+    border: none !important;
+  }
+}

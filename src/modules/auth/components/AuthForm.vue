@@ -21,6 +21,8 @@ function onReset() {
   form.phone = ''
   form.password = ''
 }
+
+const phone = ref('')
 </script>
 
 <template>
@@ -32,8 +34,6 @@ function onReset() {
   >
     <div class="un-space-y-4">
       <PhoneInput v-model="form.phone" />
-
-      {{ form.phone }}
 
       <PasswordInput
         v-if="isPasswordVisible"

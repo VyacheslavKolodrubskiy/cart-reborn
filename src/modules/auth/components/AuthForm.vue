@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Form } from '../auth.models'
+import { useAuthStore } from '../stores/auth.store'
 
 const emit = defineEmits(['submit'])
 
@@ -7,13 +8,21 @@ const form = reactive<Form>({
   phone: '',
   password: '',
 })
-
+const authStore = useAuthStore()
 const isForgotPassword = ref(false)
 const isPasswordVisible = ref(false)
 
-function onSubmit() {
+async function onSubmit() {
   form.phone = `+7${form.phone}`
-  emit('submit', form)
+
+  try {
+    isPasswordVisible.value = (await authStore.checkPhone(
+      form.phone
+    )) as boolean
+  } catch (error) {
+    console.log('error:', error)
+    isPasswordVisible.value = false
+  }
 }
 
 function onReset() {
@@ -33,7 +42,7 @@ function onReset() {
       <PhoneInput v-model="form.phone" />
 
       <PasswordInput
-        v-if="!isPasswordVisible"
+        v-if="isPasswordVisible"
         v-model="form.password"
         label="СМС пароль"
       />

@@ -20,10 +20,14 @@ export const useAuthStore = defineStore('auth', {
     },
     async checkPhone(phone: string) {
       try {
-        const { data } = await api('auth/request', { params: { phone } })
-        console.log('data:', data)
+        const { data } = await api('auth/requ2est', { params: { phone } })
+
+        if (data.message === 'Success') {
+          return true
+        }
       } catch (error) {
         console.error(error)
+        throw error
       }
     },
     logout() {

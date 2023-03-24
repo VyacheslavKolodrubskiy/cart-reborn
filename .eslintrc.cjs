@@ -1,6 +1,9 @@
 module.exports = {
   extends: ['@antfu', 'plugin:prettier/recommended'],
+  plugins: ['simple-import-sort'],
   rules: {
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
     'no-console': 'off',
     'unused-imports/no-unused-vars': [
       'warn',
@@ -37,4 +40,24 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.{vue,js}'],
+      rules: {
+        'simple-import-sort/imports': [
+          'error',
+          {
+            groups: [
+              ['^vue', '^@?\\w'],
+              ['^(@|components)(/.*|$)'],
+              ['^\\u0000'],
+              ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+              ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+              ['^.+\\.?(css|scss)$'],
+            ],
+          },
+        ],
+      },
+    },
+  ],
 }

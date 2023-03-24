@@ -1,5 +1,5 @@
-import type { RouteRecordRaw, Router } from 'vue-router'
 import { Pages } from 'src/shared/enums'
+import type { RouteRecordRaw, Router } from 'vue-router'
 
 const moduleRoute: RouteRecordRaw = {
   path: '/auth',

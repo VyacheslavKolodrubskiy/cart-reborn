@@ -12,7 +12,6 @@ specifiers:
   eslint: ^8.36.0
   eslint-config-prettier: ^8.8.0
   eslint-plugin-prettier: ^4.2.1
-  eslint-plugin-simple-import-sort: ^10.0.0
   pinia: ^2.0.33
   pinia-plugin-persistedstate: ^3.1.0
   postcss: ^8.4.21
@@ -53,7 +52,6 @@ devDependencies:
   eslint: 8.36.0
   eslint-config-prettier: 8.8.0_eslint@8.36.0
   eslint-plugin-prettier: 4.2.1_ose2zoovovx4ulolhifz3tfzx4
-  eslint-plugin-simple-import-sort: 10.0.0_eslint@8.36.0
   postcss: 8.4.21
   prettier: 2.8.6
   typescript: 4.9.5
@@ -3629,14 +3627,6 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
-    dependencies:
-      eslint: 8.36.0
-    dev: true
-
-  /eslint-plugin-simple-import-sort/10.0.0_eslint@8.36.0:
-    resolution: {integrity: sha512-AeTvO9UCMSNzIHRkg8S6c3RPy5YEwKWSQPx3DYghLedo2ZQxowPFLGDN1AZ2evfg6r6mjBSZSLxLFsWSu3acsw==}
-    peerDependencies:
-      eslint: '>=5.0.0'
     dependencies:
       eslint: 8.36.0
     dev: true

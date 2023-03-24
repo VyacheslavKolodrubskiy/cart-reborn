@@ -16,6 +16,7 @@ module.exports = {
       'PascalCase',
       {
         registeredComponentsOnly: false,
+        ignore: ['component'],
       },
     ],
     'vue/padding-line-between-blocks': 'error',

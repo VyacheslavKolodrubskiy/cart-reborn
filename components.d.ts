@@ -14,6 +14,7 @@ declare module '@vue/runtime-core' {
     AuthRequestForm: typeof import('./src/modules/auth/components/AuthRequestForm.vue')['default']
     BaseButton: typeof import('./src/shared/components/button/BaseButton.vue')['default']
     BaseButtonFlat: typeof import('./src/shared/components/button/BaseButtonFlat.vue')['default']
+    GoodsIcon: typeof import('./src/shared/components/icons/GoodsIcon.vue')['default']
     LogoIcon: typeof import('./src/shared/components/icons/LogoIcon.vue')['default']
     PasswordInput: typeof import('./src/shared/components/input/PasswordInput.vue')['default']
     PhoneInput: typeof import('./src/shared/components/input/PhoneInput.vue')['default']

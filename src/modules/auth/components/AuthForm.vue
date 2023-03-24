@@ -20,12 +20,10 @@ function onReset() {
   form.phone = ''
   form.password = ''
 }
-
-const phone = ref('')
 </script>
 
 <template>
-  <h2 class="un-text-2xl un-font-bold un-text-black">Авторизация</h2>
+  <BaseTitle>Авторизация</BaseTitle>
 
   <QForm
     @reset="onReset"

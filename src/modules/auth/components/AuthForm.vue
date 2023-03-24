@@ -13,8 +13,7 @@ const isPasswordVisible = ref(false)
 
 function onSubmit() {
   form.phone = `+7${form.phone}`
-  // emit('submit', form)
-  console.log('form:', form)
+  emit('submit', form)
 }
 
 function onReset() {

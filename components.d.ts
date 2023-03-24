@@ -21,6 +21,7 @@ declare module '@vue/runtime-core' {
     ProfileIcon: typeof import('./src/shared/components/icons/ProfileIcon.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SvgIcon: typeof import('./src/shared/components/SvgIcon.vue')['default']
     TheFooter: typeof import('./src/shared/components/TheFooter.vue')['default']
   }
 }

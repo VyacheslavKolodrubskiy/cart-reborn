@@ -18,7 +18,6 @@ declare module '@vue/runtime-core' {
     LogoIcon: typeof import('./src/shared/components/icons/LogoIcon.vue')['default']
     PasswordInput: typeof import('./src/shared/components/input/PasswordInput.vue')['default']
     PhoneInput: typeof import('./src/shared/components/input/PhoneInput.vue')['default']
-    ProductIcon: typeof import('./src/shared/components/icons/ProductIcon.vue')['default']
     ProfileIcon: typeof import('./src/shared/components/icons/ProfileIcon.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

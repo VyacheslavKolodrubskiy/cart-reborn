@@ -33,6 +33,8 @@ function onReset() {
     <div class="un-space-y-4">
       <PhoneInput v-model="form.phone" />
 
+      {{ form.phone }}
+
       <PasswordInput
         v-if="isPasswordVisible"
         v-model="form.password"

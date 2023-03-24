@@ -33,12 +33,12 @@ function onReset() {
       <PhoneInput v-model="form.phone" />
 
       <PasswordInput
-        v-if="isPasswordVisible"
+        v-if="!isPasswordVisible"
         v-model="form.password"
       />
     </div>
 
-    <div class="un-mt-auto">
+    <div class="un-mt-10">
       <BaseButtonFlat
         v-if="isForgotPassword"
         class="un-mb-[31px]"

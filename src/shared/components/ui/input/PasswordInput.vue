@@ -4,30 +4,36 @@ import type { QInputProps } from 'quasar'
 
 interface Props extends QInputProps {
   modelValue: string
+  label?: string
+  name?: string
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  label: 'Пароль',
+  name: 'password',
+})
 const emit = defineEmits(['update:modelValue'])
 </script>
 
 <template>
   <QInput
+    autocomplete="new-password"
     bg-color="grey-2"
-    label="Пароль"
+    :label="label"
     label-color="grey-7"
     :model-value="modelValue"
-    name="password"
+    :name="name"
     outlined
     type="password"
     @update:model-value="emit('update:modelValue', $event)"
   >
     <template
-      v-for="(_, name) in ($slots as Readonly<QInputSlots>)"
-      :key="name"
-      #[name]="slotData"
+      v-for="(_, slotName) in ($slots as Readonly<QInputSlots>)"
+      :key="slotName"
+      #[slotName]="slotData"
     >
       <slot
-        :name="name"
+        :name="slotName"
         v-bind="{ ...slotData as {} }"
       />
     </template>

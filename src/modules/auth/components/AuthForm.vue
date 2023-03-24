@@ -29,12 +29,13 @@ function onReset() {
     @reset="onReset"
     @submit="onSubmit"
   >
-    <div class="un-space-y-4">
+    <div class="un-space-y-[29px]">
       <PhoneInput v-model="form.phone" />
 
       <PasswordInput
         v-if="!isPasswordVisible"
         v-model="form.password"
+        label="СМС пароль"
       />
     </div>
 

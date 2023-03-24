@@ -36,12 +36,12 @@ const emit = defineEmits(['update:modelValue'])
     @update:model-value="emit('update:modelValue', $event)"
   >
     <template
-      v-for="(_, name) in ($slots as Readonly<QInputSlots>)"
-      :key="name"
-      #[name]="slotData"
+      v-for="(_, slotName) in ($slots as Readonly<QInputSlots>)"
+      :key="slotName"
+      #[slotName]="slotData"
     >
       <slot
-        :name="name"
+        :name="slotName"
         v-bind="{ ...slotData as {} }"
       />
     </template>

@@ -5,24 +5,20 @@ import type { QBtnProps } from 'quasar'
 interface Props extends QBtnProps {}
 
 const props = defineProps<Props>()
-
-const classes = computed(() => {
-  return 'un-text-sm un-font-normal un-p-0!'
-})
 </script>
 
 <template>
   <BaseButton
-    :class="classes"
+    class="un-text-sm un-font-normal un-p-0!"
     flat
   >
     <template
-      v-for="(_, name) in ($slots as Readonly<QBtnSlots>)"
-      :key="name"
-      #[name]="slotData"
+      v-for="(_, slotName) in ($slots as Readonly<QBtnSlots>)"
+      :key="slotName"
+      #[slotName]="slotData"
     >
       <slot
-        :name="name"
+        :name="slotName"
         v-bind="{ ...slotData as {} }"
       />
     </template>

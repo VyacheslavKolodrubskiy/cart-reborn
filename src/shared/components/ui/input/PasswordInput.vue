@@ -12,6 +12,7 @@ const props = withDefaults(defineProps<Props>(), {
   label: 'Пароль',
   name: 'password',
 })
+
 const emit = defineEmits(['update:modelValue'])
 </script>
 

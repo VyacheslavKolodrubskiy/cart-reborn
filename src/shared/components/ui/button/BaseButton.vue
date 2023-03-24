@@ -9,26 +9,22 @@ interface Props extends QBtnProps {
 const props = withDefaults(defineProps<Props>(), {
   color: 'primary',
 })
-
-const classes = computed(() => {
-  return 'un-text-sm un-px-[100px] un-font-bold un-py-4 un-rounded-[41px] un-bg-[#e61771]'
-})
 </script>
 
 <template>
   <QBtn
-    :class="classes"
+    class="un-text-sm un-px-[100px] un-font-bold un-py-4 un-rounded-[41px] un-bg-[#e61771]"
     :color="color"
     no-caps
     :ripple="false"
   >
     <template
-      v-for="(_, name) in ($slots as Readonly<QBtnSlots>)"
-      :key="name"
-      #[name]="slotData"
+      v-for="(_, slotName) in ($slots as Readonly<QBtnSlots>)"
+      :key="slotName"
+      #[slotName]="slotData"
     >
       <slot
-        :name="name"
+        :name="slotName"
         v-bind="{ ...slotData as {} }"
       />
     </template>

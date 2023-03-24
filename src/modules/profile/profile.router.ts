@@ -8,7 +8,7 @@ const moduleRoute: RouteRecordRaw = {
     {
       path: '',
       name: Pages.PROFILE,
-      component: () => import('./pages/ProfilePage.vue'),
+      component: () => import('./pages/ProfileMain.vue'),
     },
   ],
 }

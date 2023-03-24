@@ -8,7 +8,7 @@ const moduleRoute: RouteRecordRaw = {
     {
       path: '',
       name: Pages.AUTH,
-      component: () => import('./pages/AuthPage.vue'),
+      component: () => import('./pages/AuthMain.vue'),
     },
   ],
 }

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Pages } from '../enums'
 import GoodsIcon from 'src/shared/components/icons/GoodsIcon.vue'
 import ApplicationCheckIcon from 'src/shared/components/icons/ApplicationCheckIcon.vue'
 import ProfileIcon from 'src/shared/components/icons/ProfileIcon.vue'
+import { Pages } from '../enums'
 
 const navLinks = [
   {
@@ -30,13 +30,21 @@ const navLinks = [
       <RouterLink
         v-for="({ name, to, icon }, index) in navLinks"
         :key="index"
+        v-slot="{ isExactActive }"
         class="un-flex un-flex-col un-w-1/3 un-space-y-1 un-items-center un-justify-between"
         :to="{ name: to }"
-        v-slot="{isExactActive}"
       >
+        <component
+          :is="icon"
+          :class="{ 'un-fill-[#E61771]': isExactActive }"
+        />
 
-        <component :class="{'un-fill-[#E61771]': isExactActive}" :is="icon" />
-        <div :class="{'un-text-[#322F38]': isExactActive}" class="un-text-[#979797]">{{ name }}</div>
+        <div
+          class="un-text-[#979797]"
+          :class="{ 'un-text-[#322F38]': isExactActive }"
+        >
+          {{ name }}
+        </div>
       </RouterLink>
     </QItem>
   </QList>

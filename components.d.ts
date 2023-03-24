@@ -11,11 +11,11 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AuthForm: typeof import('./src/modules/auth/components/AuthForm.vue')['default']
     AuthRequestForm: typeof import('./src/modules/auth/components/AuthRequestForm.vue')['default']
-    BaseButton: typeof import('./src/shared/components/UI/button/BaseButton.vue')['default']
-    BaseButtonFlat: typeof import('./src/shared/components/UI/button/BaseButtonFlat.vue')['default']
+    BaseButton: typeof import('./src/shared/components/button/BaseButton.vue')['default']
+    BaseButtonFlat: typeof import('./src/shared/components/button/BaseButtonFlat.vue')['default']
     LogoIcon: typeof import('./src/shared/components/icons/LogoIcon.vue')['default']
-    PasswordInput: typeof import('./src/shared/components/PasswordInput.vue')['default']
-    PhoneInput: typeof import('./src/shared/components/PhoneInput.vue')['default']
+    PasswordInput: typeof import('./src/shared/components/input/PasswordInput.vue')['default']
+    PhoneInput: typeof import('./src/shared/components/input/PhoneInput.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

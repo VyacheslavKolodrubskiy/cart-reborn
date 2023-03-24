@@ -33,3 +33,5 @@ yarn-error.log*
 *.sln
 
 .env
+auto-imports.d.ts
+components.d.ts

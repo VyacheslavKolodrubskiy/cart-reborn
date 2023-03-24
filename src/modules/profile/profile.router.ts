@@ -2,13 +2,13 @@ import type { RouteRecordRaw, Router } from 'vue-router'
 import { Pages } from 'src/shared/enums'
 
 const moduleRoute: RouteRecordRaw = {
-  path: '/auth',
-  component: () => import('layouts/TheAuthLayout.vue'),
+  path: '/profile',
+  component: () => import('layouts/TheMainLayout.vue'),
   children: [
     {
       path: '',
-      name: Pages.AUTH,
-      component: () => import('./pages/AuthPage.vue'),
+      name: Pages.PROFILE,
+      component: () => import('./pages/ProfilePage.vue'),
     },
   ],
 }

@@ -9,6 +9,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ApplicationCheckIcon: typeof import('./src/shared/components/icons/ApplicationCheckIcon.vue')['default']
     AuthForm: typeof import('./src/modules/auth/components/AuthForm.vue')['default']
     AuthRequestForm: typeof import('./src/modules/auth/components/AuthRequestForm.vue')['default']
     BaseButton: typeof import('./src/shared/components/button/BaseButton.vue')['default']
@@ -16,7 +17,10 @@ declare module '@vue/runtime-core' {
     LogoIcon: typeof import('./src/shared/components/icons/LogoIcon.vue')['default']
     PasswordInput: typeof import('./src/shared/components/input/PasswordInput.vue')['default']
     PhoneInput: typeof import('./src/shared/components/input/PhoneInput.vue')['default']
+    ProductIcon: typeof import('./src/shared/components/icons/ProductIcon.vue')['default']
+    ProfileIcon: typeof import('./src/shared/components/icons/ProfileIcon.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TheFooter: typeof import('./src/shared/components/TheFooter.vue')['default']
   }
 }

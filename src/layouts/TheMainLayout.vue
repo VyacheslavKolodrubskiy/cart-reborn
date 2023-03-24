@@ -3,5 +3,7 @@
     <QPageContainer>
       <RouterView />
     </QPageContainer>
+
+    <TheFooter />
   </QLayout>
 </template>

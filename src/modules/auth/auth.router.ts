@@ -2,7 +2,7 @@ import { Pages } from 'src/shared/enums'
 import type { RouteRecordRaw, Router } from 'vue-router'
 
 const moduleRoute: RouteRecordRaw = {
-  path: '/auth',
+  path: '/auth/:filter*/',
   component: () => import('layouts/TheAuthLayout.vue'),
   children: [
     {

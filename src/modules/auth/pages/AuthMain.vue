@@ -1,13 +1,42 @@
 <script setup lang="ts">
-import type { Form } from '../auth.models'
-import { useAuthStore } from '../stores/auth.store'
+const mounts = [
+  'january',
+  'february',
+  'march',
+  'april',
+  'may',
+  'june',
+  'july',
+  'august',
+  'september',
+  'october',
+  'november',
+  'december',
+]
 
-const authStore = useAuthStore()
+const filters = ref<string[]>([])
+const route = useRoute()
+const router = useRouter()
 
-function onSubmit(form: Form) {
-  console.log('form:', form)
-  authStore.checkPhone(form.phone)
+const routeFilters = route.params.filter
+
+if (Array.isArray(routeFilters) && routeFilters.length > 0) {
+  filters.value = routeFilters
 }
+
+function onClick() {
+  const randomIndex = Math.floor(Math.random() * mounts.length)
+  filters.value.push(mounts[randomIndex])
+  const path = `/auth/${filters.value.join('/')}/`
+  router.push({ path })
+}
+
+watch(
+  () => route.params.filter,
+  (value) => {
+    console.log('value:', value)
+  }
+)
 </script>
 
 <template>
@@ -15,7 +44,11 @@ function onSubmit(form: Form) {
     class="un-rounded-tl-[20px] un-rounded-tr-[20px] un-min-h-screen un-bg-white un-pt-[36px] un-pb-[27px] un-px-6 un-text-center un-space-y-6"
   >
     <!-- <AuthRequestForm @submit="onSubmit" /> -->
-
-    <AuthForm @submit="onSubmit" />
+    <QBtn
+      color="primary"
+      icon="check"
+      label="OK"
+      @click="onClick"
+    />
   </div>
 </template>

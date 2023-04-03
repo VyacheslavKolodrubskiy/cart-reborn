@@ -17,6 +17,7 @@ const mounts = [
 const filters = ref<string[]>([])
 const route = useRoute()
 const router = useRouter()
+const count = ref(0)
 
 const routeFilters = route.params.filter
 
@@ -25,8 +26,7 @@ if (Array.isArray(routeFilters) && routeFilters.length > 0) {
 }
 
 function onClick() {
-  const randomIndex = Math.floor(Math.random() * mounts.length)
-  filters.value.push(mounts[randomIndex])
+  filters.value.push(mounts[count.value++])
   const path = `/auth/${filters.value.join('/')}/`
   router.push({ path })
 }

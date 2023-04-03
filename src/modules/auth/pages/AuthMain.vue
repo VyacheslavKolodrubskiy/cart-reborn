@@ -19,7 +19,7 @@ const route = useRoute()
 const router = useRouter()
 const count = ref(route.params.filter ? route.params.filter.length : 0)
 
-const routeFilters = route.params.filter.slice
+const routeFilters = route.params.filter
 
 if (Array.isArray(routeFilters) && routeFilters.length > 0) {
   filters.value = routeFilters

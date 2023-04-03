@@ -17,9 +17,9 @@ const mounts = [
 const filters = ref<string[]>([])
 const route = useRoute()
 const router = useRouter()
-const count = ref(0)
+const count = ref(route.params.filter ? route.params.filter.length : 0)
 
-const routeFilters = route.params.filter
+const routeFilters = route.params.filter.slice
 
 if (Array.isArray(routeFilters) && routeFilters.length > 0) {
   filters.value = routeFilters
@@ -27,6 +27,7 @@ if (Array.isArray(routeFilters) && routeFilters.length > 0) {
 
 function onClick() {
   filters.value.push(mounts[count.value++])
+  console.log('route.params.filter:', route.params.filter)
   const path = `/auth/${filters.value.join('/')}/`
   router.push({ path })
 }
